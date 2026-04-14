@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anthony Lam — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <header>
+  <header class="site-header">
     <h1>Anthony Lam</h1>
-    <p>Digital Media Artist</p>
-    <a href="#work">View Work</a>
+    <p class="intro">Selected Works</p>
   </header>
 
-  <section id="work">
-    <h2>Selected Works</h2>
+  <main class="gallery">
 
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Short description of your work.</p>
-    </div>
+    <article class="piece" style="--aura-color: rgba(180, 180, 180, 0.22);">
+      <button class="piece-toggle" aria-expanded="false">
+        <img src="images/work1.jpg" alt="Project 1" class="piece-image" />
+        <div class="piece-text">
+          <h2>Project Title One</h2>
+          <p class="caption">Short caption or description goes here.</p>
+        </div>
+      </button>
+      <div class="piece-expanded">
+        <img src="images/work1.jpg" alt="Project 1 full view" class="expanded-image" />
+      </div>
+    </article>
 
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Short description of your work.</p>
-    </div>
+    <article class="piece" style="--aura-color: rgba(120, 170, 255, 0.24);">
+      <button class="piece-toggle" aria-expanded="false">
+        <img src="images/work2.jpg" alt="Project 2" class="piece-image" />
+        <div class="piece-text">
+          <h2>Project Title Two</h2>
+          <p class="caption">Short caption or description goes here.</p>
+        </div>
+      </button>
+      <div class="piece-expanded">
+        <img src="images/work2.jpg" alt="Project 2 full view" class="expanded-image" />
+      </div>
+    </article>
 
-    <div class="project">
-      <h3>Project 3</h3>
-      <p>Short description of your work.</p>
-    </div>
+    <article class="piece" style="--aura-color: rgba(255, 120, 120, 0.22);">
+      <button class="piece-toggle" aria-expanded="false">
+        <img src="images/work3.jpg" alt="Project 3" class="piece-image" />
+        <div class="piece-text">
+          <h2>Project Title Three</h2>
+          <p class="caption">Short caption or description goes here.</p>
+        </div>
+      </button>
+      <div class="piece-expanded">
+        <img src="images/work3.jpg" alt="Project 3 full view" class="expanded-image" />
+      </div>
+    </article>
 
-  </section>
+  </main>
 
-  <footer>
-    <p>Contact: your@email.com</p>
-  </footer>
+  <script>
+    const pieces = document.querySelectorAll(".piece");
 
+    pieces.forEach((piece) => {
+      const button = piece.querySelector(".piece-toggle");
+
+      button.addEventListener("click", () => {
+        const isOpen = piece.classList.contains("active");
+
+        pieces.forEach((item) => {
+          item.classList.remove("active");
+          item.querySelector(".piece-toggle").setAttribute("aria-expanded", "false");
+        });
+
+        if (!isOpen) {
+          piece.classList.add("active");
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
