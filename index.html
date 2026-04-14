@@ -7,49 +7,70 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="background-glow glow-1"></div>
+  <div class="background-glow glow-2"></div>
+
   <header class="site-header">
-    <h1>Anthony Lam</h1>
-    <p class="intro">Selected Works</p>
+    <div class="header-glass">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Anthony Lam</h1>
+      <p class="intro">Selected works in digital media, image-making, and object-based practice.</p>
+    </div>
   </header>
 
   <main class="gallery">
 
-    <article class="piece" style="--aura-color: rgba(180, 180, 180, 0.22);">
+    <article class="piece" style="--aura-color: rgba(160, 160, 160, 0.22);">
       <button class="piece-toggle" aria-expanded="false">
-        <img src="images/work1.jpg" alt="Project 1" class="piece-image" />
-        <div class="piece-text">
+        <div class="piece-frame">
+          <img src="images/work1.jpg" alt="Project 1" class="piece-image" />
+        </div>
+        <div class="piece-text glass-text">
           <h2>Project Title One</h2>
           <p class="caption">Short caption or description goes here.</p>
         </div>
       </button>
+
       <div class="piece-expanded">
-        <img src="images/work1.jpg" alt="Project 1 full view" class="expanded-image" />
+        <div class="expanded-glass">
+          <img src="images/work1.jpg" alt="Project 1 full view" class="expanded-image" />
+        </div>
       </div>
     </article>
 
-    <article class="piece" style="--aura-color: rgba(120, 170, 255, 0.24);">
+    <article class="piece" style="--aura-color: rgba(120, 170, 255, 0.22);">
       <button class="piece-toggle" aria-expanded="false">
-        <img src="images/work2.jpg" alt="Project 2" class="piece-image" />
-        <div class="piece-text">
+        <div class="piece-frame">
+          <img src="images/work2.jpg" alt="Project 2" class="piece-image" />
+        </div>
+        <div class="piece-text glass-text">
           <h2>Project Title Two</h2>
           <p class="caption">Short caption or description goes here.</p>
         </div>
       </button>
+
       <div class="piece-expanded">
-        <img src="images/work2.jpg" alt="Project 2 full view" class="expanded-image" />
+        <div class="expanded-glass">
+          <img src="images/work2.jpg" alt="Project 2 full view" class="expanded-image" />
+        </div>
       </div>
     </article>
 
-    <article class="piece" style="--aura-color: rgba(255, 120, 120, 0.22);">
+    <article class="piece" style="--aura-color: rgba(255, 130, 130, 0.20);">
       <button class="piece-toggle" aria-expanded="false">
-        <img src="images/work3.jpg" alt="Project 3" class="piece-image" />
-        <div class="piece-text">
+        <div class="piece-frame">
+          <img src="images/work3.jpg" alt="Project 3" class="piece-image" />
+        </div>
+        <div class="piece-text glass-text">
           <h2>Project Title Three</h2>
           <p class="caption">Short caption or description goes here.</p>
         </div>
       </button>
+
       <div class="piece-expanded">
-        <img src="images/work3.jpg" alt="Project 3 full view" class="expanded-image" />
+        <div class="expanded-glass">
+          <img src="images/work3.jpg" alt="Project 3 full view" class="expanded-image" />
+        </div>
       </div>
     </article>
 
