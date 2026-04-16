@@ -4,13 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   font-family: 'Doto', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 40px 0;
+  padding: 40px 16px 80px;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 /* BACKGROUND ORBS */
@@ -20,60 +27,102 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.25;
+  filter: blur(110px);
+  opacity: 0.22;
   mix-blend-mode: screen;
-  animation: float 20s ease-in-out infinite alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.orb-1 { width: 400px; height: 400px; background: red; top: 10%; left: -5%; }
-.orb-2 { width: 500px; height: 500px; background: blue; top: 20%; right: -10%; }
-.orb-3 { width: 350px; height: 350px; background: purple; bottom: 10%; left: 10%; }
+.orb-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 60, 140, 0.75) 0%, rgba(255, 60, 140, 0) 70%);
+  top: 8%;
+  left: -6%;
+  animation: floatOne 18s infinite alternate;
+}
 
-@keyframes float {
-  0% { transform: translate(0,0); }
-  100% { transform: translate(120px, 80px); }
+.orb-2 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(70, 130, 255, 0.72) 0%, rgba(70, 130, 255, 0) 72%);
+  top: 18%;
+  right: -10%;
+  animation: floatTwo 22s infinite alternate;
+}
+
+.orb-3 {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(160, 90, 255, 0.68) 0%, rgba(160, 90, 255, 0) 72%);
+  bottom: 10%;
+  left: 12%;
+  animation: floatThree 20s infinite alternate;
+}
+
+@keyframes floatOne {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(120px, 80px) scale(1.18); }
+}
+
+@keyframes floatTwo {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-120px, 100px) scale(1.14); }
+}
+
+@keyframes floatThree {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(90px, -100px) scale(1.2); }
 }
 
 /* HEADER */
 
 .site-header {
-  text-align: center;
-  margin-bottom: 60px;
+  max-width: 980px;
+  margin: 0 auto 64px;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .site-header h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-family: 'Doto', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 0.95;
+  margin-bottom: 14px;
 }
 
 .intro {
-  font-size: 0.8rem;
-  opacity: 0.6;
-  margin-top: 10px;
+  font-family: 'Doto', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 /* GALLERY */
 
 .gallery {
-  width: 100%;
-  max-width: 900px;
+  width: min(100%, 920px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 72px;
   position: relative;
   z-index: 1;
 }
-
-/* EACH PHOTO */
 
 .piece {
   width: 100%;
@@ -83,21 +132,62 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
-/* TEXT */
+/* TEXT PANEL */
 
 .piece-text {
   margin-top: 16px;
   text-align: center;
+  font-family: 'Doto', sans-serif;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  padding: 18px 18px 16px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
 .piece-text h2 {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
+  font-family: 'Doto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
 }
 
 .caption {
-  font-size: 0.7rem;
-  opacity: 0.5;
+  font-family: 'Doto', sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.7;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  body {
+    padding: 24px 10px 60px;
+  }
+
+  .site-header {
+    margin-bottom: 42px;
+  }
+
+  .gallery {
+    gap: 48px;
+  }
+
+  .piece-text {
+    padding: 14px 12px;
+  }
+
+  .orb {
+    filter: blur(80px);
+    opacity: 0.2;
+  }
 }
