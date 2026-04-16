@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ANTHONY LAM — PORTFOLIO</title>
 
-  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;600&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- BACKGROUND GLOW -->
-  <div class="background-glow glow-1"></div>
-  <div class="background-glow glow-2"></div>
+  <div class="background-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <div class="orb orb-6"></div>
+  </div>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-glass">
       <p class="eyebrow">PORTFOLIO</p>
@@ -31,15 +32,12 @@
     </div>
   </header>
 
-  <!-- GALLERY -->
   <main class="gallery">
 
-    <!-- PROJECT 1 -->
     <article class="piece" style="--aura-color: rgba(160,160,160,0.22);">
       <button class="piece-toggle" aria-expanded="false">
-
         <div class="piece-frame">
-          <img src="images/work1.jpg" alt="PROJECT 1" class="piece-image" />
+          <img src="images/work1.jpg" alt="WORK ONE" class="piece-image" />
         </div>
 
         <div class="piece-text glass-text">
@@ -48,22 +46,19 @@
             SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
           </p>
         </div>
-
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/work1.jpg" alt="PROJECT 1 FULL" class="expanded-image" />
+          <img src="images/work1.jpg" alt="WORK ONE FULL VIEW" class="expanded-image" />
         </div>
       </div>
     </article>
 
-    <!-- PROJECT 2 -->
     <article class="piece" style="--aura-color: rgba(120,170,255,0.22);">
       <button class="piece-toggle" aria-expanded="false">
-
         <div class="piece-frame">
-          <img src="images/work2.jpg" alt="PROJECT 2" class="piece-image" />
+          <img src="images/work2.jpg" alt="WORK TWO" class="piece-image" />
         </div>
 
         <div class="piece-text glass-text">
@@ -72,22 +67,19 @@
             SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
           </p>
         </div>
-
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/work2.jpg" alt="PROJECT 2 FULL" class="expanded-image" />
+          <img src="images/work2.jpg" alt="WORK TWO FULL VIEW" class="expanded-image" />
         </div>
       </div>
     </article>
 
-    <!-- PROJECT 3 -->
     <article class="piece" style="--aura-color: rgba(255,130,130,0.20);">
       <button class="piece-toggle" aria-expanded="false">
-
         <div class="piece-frame">
-          <img src="images/work3.jpg" alt="PROJECT 3" class="piece-image" />
+          <img src="images/work3.jpg" alt="WORK THREE" class="piece-image" />
         </div>
 
         <div class="piece-text glass-text">
@@ -96,19 +88,17 @@
             SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
           </p>
         </div>
-
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/work3.jpg" alt="PROJECT 3 FULL" class="expanded-image" />
+          <img src="images/work3.jpg" alt="WORK THREE FULL VIEW" class="expanded-image" />
         </div>
       </div>
     </article>
 
   </main>
 
-  <!-- SCRIPT -->
   <script>
     const pieces = document.querySelectorAll(".piece");
 
