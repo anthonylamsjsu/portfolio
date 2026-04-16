@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-/* BACKGROUND LAVA LAMP AURAS */
+/* BACKGROUND ORBS */
 
 .background-orbs {
   position: fixed;
@@ -227,40 +227,10 @@ body {
   transform: scale(1.05);
 }
 
-.piece.active::before {
-  animation: auraPulse 4s ease-out forwards;
-}
-
-@keyframes auraPulse {
-  0% {
-    opacity: 0.05;
-    transform: scale(0.94);
-  }
-  20% {
-    opacity: 0.72;
-    transform: scale(1.02);
-  }
-  55% {
-    opacity: 0.34;
-    transform: scale(1.12);
-  }
-  100% {
-    opacity: 0.14;
-    transform: scale(1.22);
-  }
-}
-
-.piece-toggle {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-  display: block;
+.piece-frame,
+.piece-text {
   position: relative;
   z-index: 1;
-  font: inherit;
 }
 
 .piece-frame {
@@ -279,8 +249,9 @@ body {
   width: 100%;
   display: block;
   border-radius: 18px;
-  object-fit: cover;
-  max-height: 82vh;
+  object-fit: contain;
+  height: auto;
+  max-height: none;
 }
 
 .piece-text {
@@ -311,32 +282,18 @@ body {
   max-width: 760px;
 }
 
+/* DISABLE OLD EXPAND LAYOUT */
+
 .piece-expanded {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.8s ease, opacity 0.45s ease, margin-top 0.45s ease;
-  margin-top: 0;
-  position: relative;
-  z-index: 1;
+  display: none;
 }
 
 .piece.active .piece-expanded {
-  max-height: 1800px;
-  opacity: 1;
-  margin-top: 16px;
+  display: none;
 }
 
 .expanded-glass {
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 28px;
-  padding: 10px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-    0 24px 80px rgba(0, 0, 0, 0.36);
+  display: none;
 }
 
 .expanded-image {
@@ -344,7 +301,8 @@ body {
   display: block;
   border-radius: 18px;
   object-fit: contain;
-  max-height: 95vh;
+  height: auto;
+  max-height: none;
 }
 
 @media (max-width: 700px) {
@@ -361,8 +319,7 @@ body {
     padding: 18px 16px;
   }
 
-  .piece-frame,
-  .expanded-glass {
+  .piece-frame {
     border-radius: 22px;
     padding: 8px;
   }
@@ -372,23 +329,9 @@ body {
     padding: 12px 13px;
   }
 
- .piece-image {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-  object-fit: contain;
-  height: auto;
-  max-height: none;
-}
-
-.expanded-image {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-  object-fit: contain;
-  height: auto;
-  max-height: none;
-}
+  .piece-image {
+    border-radius: 14px;
+  }
 
   .orb {
     filter: blur(70px);
