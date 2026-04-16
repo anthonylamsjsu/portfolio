@@ -11,132 +11,48 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- BACKGROUND ORBS -->
   <div class="background-orbs">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
-    <div class="orb orb-4"></div>
-    <div class="orb orb-5"></div>
-    <div class="orb orb-6"></div>
   </div>
 
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="header-glass">
-      <p class="eyebrow">PORTFOLIO</p>
-      <h1>ANTHONY LAM</h1>
-      <p class="intro">
-        SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE
-      </p>
-    </div>
+    <h1>ANTHONY LAM</h1>
+    <p class="intro">SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE</p>
   </header>
 
-  <!-- GALLERY -->
   <main class="gallery">
 
-    <!-- CHAMPION -->
-    <article class="piece" style="--aura-color: rgba(255, 120, 120, 0.22);">
-      <button class="piece-toggle" aria-expanded="false">
+    <article class="piece">
+      <img src="CHAMPION 1.jpg" alt="CHAMPION I" class="piece-image" />
 
-        <div class="piece-frame">
-          <img src="CHAMPION 1.jpg" alt="CHAMPION" class="piece-image" />
-        </div>
-
-        <div class="piece-text glass-text">
-          <h2>CHAMPION</h2>
-          <p class="caption">
-            PHOTOGRAPHY — 2018
-            <br>
-            POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
-          </p>
-        </div>
-
-      </button>
-
-      <div class="piece-expanded">
-        <div class="expanded-glass">
-          <img src="CHAMPION 1.jpg" class="expanded-image" />
-          <img src="CHAMPION 2.jpg" class="expanded-image" />
-        </div>
+      <div class="piece-text">
+        <h2>CHAMPION I</h2>
+        <p class="caption">
+          PHOTOGRAPHY — 2018
+          <br>
+          POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
+        </p>
       </div>
     </article>
 
-    <!-- PLACEHOLDER PROJECT 2 -->
-    <article class="piece" style="--aura-color: rgba(120,170,255,0.22);">
-      <button class="piece-toggle" aria-expanded="false">
+    <article class="piece">
+      <img src="CHAMPION 2.jpg" alt="CHAMPION II" class="piece-image" />
 
-        <div class="piece-frame">
-          <img src="images/work2.jpg" alt="WORK TWO" class="piece-image" />
-        </div>
-
-        <div class="piece-text glass-text">
-          <h2>PROJECT TITLE TWO</h2>
-          <p class="caption">
-            SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
-          </p>
-        </div>
-
-      </button>
-
-      <div class="piece-expanded">
-        <div class="expanded-glass">
-          <img src="images/work2.jpg" class="expanded-image" />
-        </div>
-      </div>
-    </article>
-
-    <!-- PLACEHOLDER PROJECT 3 -->
-    <article class="piece" style="--aura-color: rgba(255,130,130,0.20);">
-      <button class="piece-toggle" aria-expanded="false">
-
-        <div class="piece-frame">
-          <img src="images/work3.jpg" alt="WORK THREE" class="piece-image" />
-        </div>
-
-        <div class="piece-text glass-text">
-          <h2>PROJECT TITLE THREE</h2>
-          <p class="caption">
-            SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
-          </p>
-        </div>
-
-      </button>
-
-      <div class="piece-expanded">
-        <div class="expanded-glass">
-          <img src="images/work3.jpg" class="expanded-image" />
-        </div>
+      <div class="piece-text">
+        <h2>CHAMPION II</h2>
+        <p class="caption">
+          PHOTOGRAPHY — 2018
+          <br>
+          POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
+        </p>
       </div>
     </article>
 
   </main>
-
-  <!-- SCRIPT -->
-  <script>
-    const pieces = document.querySelectorAll(".piece");
-
-    pieces.forEach((piece) => {
-      const button = piece.querySelector(".piece-toggle");
-
-      button.addEventListener("click", () => {
-        const isOpen = piece.classList.contains("active");
-
-        pieces.forEach((item) => {
-          item.classList.remove("active");
-          item.querySelector(".piece-toggle").setAttribute("aria-expanded", "false");
-        });
-
-        if (!isOpen) {
-          piece.classList.add("active");
-          button.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
