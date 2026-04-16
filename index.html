@@ -11,8 +11,10 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+  <!-- BACKGROUND ORBS -->
   <div class="background-orbs">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -22,6 +24,7 @@
     <div class="orb orb-6"></div>
   </div>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="header-glass">
       <p class="eyebrow">PORTFOLIO</p>
@@ -32,12 +35,15 @@
     </div>
   </header>
 
+  <!-- GALLERY -->
   <main class="gallery">
 
+    <!-- CHAMPION -->
     <article class="piece" style="--aura-color: rgba(255, 120, 120, 0.22);">
       <button class="piece-toggle" aria-expanded="false">
+
         <div class="piece-frame">
-          <img src="images/champion-1.jpg" alt="CHAMPION" class="piece-image" />
+          <img src="CHAMPION 1.jpg" alt="CHAMPION" class="piece-image" />
         </div>
 
         <div class="piece-text glass-text">
@@ -48,22 +54,21 @@
             POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
           </p>
         </div>
+
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/champion-1.jpg" alt="CHAMPION IMAGE 1" class="expanded-image" />
-          <img src="images/champion-2.jpg" alt="CHAMPION IMAGE 2" class="expanded-image" />
-          <img src="images/champion-3.jpg" alt="CHAMPION IMAGE 3" class="expanded-image" />
-          <img src="images/champion-4.jpg" alt="CHAMPION IMAGE 4" class="expanded-image" />
-          <img src="images/champion-5.jpg" alt="CHAMPION IMAGE 5" class="expanded-image" />
-          <img src="images/champion-6.jpg" alt="CHAMPION IMAGE 6" class="expanded-image" />
+          <img src="CHAMPION 1.jpg" class="expanded-image" />
+          <img src="CHAMPION 2.jpg" class="expanded-image" />
         </div>
       </div>
     </article>
 
+    <!-- PLACEHOLDER PROJECT 2 -->
     <article class="piece" style="--aura-color: rgba(120,170,255,0.22);">
       <button class="piece-toggle" aria-expanded="false">
+
         <div class="piece-frame">
           <img src="images/work2.jpg" alt="WORK TWO" class="piece-image" />
         </div>
@@ -74,17 +79,20 @@
             SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
           </p>
         </div>
+
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/work2.jpg" alt="WORK TWO FULL VIEW" class="expanded-image" />
+          <img src="images/work2.jpg" class="expanded-image" />
         </div>
       </div>
     </article>
 
+    <!-- PLACEHOLDER PROJECT 3 -->
     <article class="piece" style="--aura-color: rgba(255,130,130,0.20);">
       <button class="piece-toggle" aria-expanded="false">
+
         <div class="piece-frame">
           <img src="images/work3.jpg" alt="WORK THREE" class="piece-image" />
         </div>
@@ -95,17 +103,19 @@
             SHORT DESCRIPTION OR CONCEPT OF THE WORK GOES HERE
           </p>
         </div>
+
       </button>
 
       <div class="piece-expanded">
         <div class="expanded-glass">
-          <img src="images/work3.jpg" alt="WORK THREE FULL VIEW" class="expanded-image" />
+          <img src="images/work3.jpg" class="expanded-image" />
         </div>
       </div>
     </article>
 
   </main>
 
+  <!-- SCRIPT -->
   <script>
     const pieces = document.querySelectorAll(".piece");
 
