@@ -372,11 +372,23 @@ body {
     padding: 12px 13px;
   }
 
-  .piece-image,
-  .expanded-image {
-    border-radius: 14px;
-    max-height: none;
-  }
+ .piece-image {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: contain;
+  height: auto;
+  max-height: none;
+}
+
+.expanded-image {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: contain;
+  height: auto;
+  max-height: none;
+}
 
   .orb {
     filter: blur(70px);
