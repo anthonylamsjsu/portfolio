@@ -1,263 +1,105 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANTHONY LAM — PORTFOLIO</title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-body {
-  background: #000000;
-  color: #ffffff;
-  font-family: 'Doto', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 36px 16px 80px;
-  overflow-x: hidden;
-  position: relative;
-  min-height: 100vh;
-}
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* BACKGROUND ORBS */
+  <div class="background-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <div class="orb orb-6"></div>
+  </div>
 
-.background-orbs {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
+  <header class="site-header">
+    <h1>ANTHONY LAM</h1>
+    <p class="intro">SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE</p>
+  </header>
 
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.2;
-  mix-blend-mode: screen;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+  <main class="gallery">
+    <article class="piece">
+      <img src="CHAMPION 1.jpg" alt="CHAMPION I" class="piece-image">
+      <div class="piece-text">
+        <h2>CHAMPION I</h2>
+        <p class="caption">
+          PHOTOGRAPHY — 2018
+          <br>
+          POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
+        </p>
+      </div>
+    </article>
 
-.orb-1 {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(255, 60, 140, 0.72) 0%, rgba(255, 60, 140, 0) 72%);
-  top: 5%;
-  left: -8%;
-  animation: floatOne 18s infinite alternate;
-}
+    <article class="piece">
+      <img src="CHAMPION 2.jpg" alt="CHAMPION II" class="piece-image">
+      <div class="piece-text">
+        <h2>CHAMPION II</h2>
+        <p class="caption">
+          PHOTOGRAPHY — 2018
+          <br>
+          POWER IN NAIVETY, EGO-DEATH, AND IDENTITY
+        </p>
+      </div>
+    </article>
 
-.orb-2 {
-  width: 540px;
-  height: 540px;
-  background: radial-gradient(circle, rgba(70, 130, 255, 0.68) 0%, rgba(70, 130, 255, 0) 72%);
-  top: 12%;
-  right: -10%;
-  animation: floatTwo 22s infinite alternate;
-}
+    <article class="piece">
+      <img src="work3.jpg" alt="PROJECT THREE" class="piece-image">
+      <div class="piece-text">
+        <h2>PROJECT THREE</h2>
+        <p class="caption">
+          MEDIUM — YEAR
+          <br>
+          SHORT DESCRIPTION OF THE WORK
+        </p>
+      </div>
+    </article>
 
-.orb-3 {
-  width: 360px;
-  height: 360px;
-  background: radial-gradient(circle, rgba(160, 90, 255, 0.66) 0%, rgba(160, 90, 255, 0) 72%);
-  bottom: 12%;
-  left: 10%;
-  animation: floatThree 20s infinite alternate;
-}
+    <article class="piece">
+      <img src="work4.jpg" alt="PROJECT FOUR" class="piece-image">
+      <div class="piece-text">
+        <h2>PROJECT FOUR</h2>
+        <p class="caption">
+          MEDIUM — YEAR
+          <br>
+          SHORT DESCRIPTION OF THE WORK
+        </p>
+      </div>
+    </article>
 
-.orb-4 {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(255, 170, 70, 0.58) 0%, rgba(255, 170, 70, 0) 72%);
-  bottom: -6%;
-  right: 10%;
-  animation: floatFour 24s infinite alternate;
-}
+    <article class="piece">
+      <img src="work5.jpg" alt="PROJECT FIVE" class="piece-image">
+      <div class="piece-text">
+        <h2>PROJECT FIVE</h2>
+        <p class="caption">
+          MEDIUM — YEAR
+          <br>
+          SHORT DESCRIPTION OF THE WORK
+        </p>
+      </div>
+    </article>
 
-.orb-5 {
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(100, 255, 200, 0.44) 0%, rgba(100, 255, 200, 0) 72%);
-  top: 45%;
-  left: 45%;
-  animation: floatFive 16s infinite alternate;
-}
+    <article class="piece">
+      <img src="work6.jpg" alt="PROJECT SIX" class="piece-image">
+      <div class="piece-text">
+        <h2>PROJECT SIX</h2>
+        <p class="caption">
+          MEDIUM — YEAR
+          <br>
+          SHORT DESCRIPTION OF THE WORK
+        </p>
+      </div>
+    </article>
+  </main>
 
-.orb-6 {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 72%);
-  top: 58%;
-  right: 28%;
-  animation: floatSix 19s infinite alternate;
-}
-
-@keyframes floatOne {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(120px, 80px) scale(1.18); }
-}
-
-@keyframes floatTwo {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-140px, 120px) scale(1.12); }
-}
-
-@keyframes floatThree {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(90px, -120px) scale(1.22); }
-}
-
-@keyframes floatFour {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-110px, -80px) scale(1.15); }
-}
-
-@keyframes floatFive {
-  0% { transform: translate(0, 0) scale(0.95); }
-  100% { transform: translate(-70px, 70px) scale(1.3); }
-}
-
-@keyframes floatSix {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(80px, -60px) scale(1.16); }
-}
-
-/* HEADER */
-
-.site-header {
-  max-width: 1100px;
-  margin: 0 auto 52px;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.site-header h1 {
-  font-family: 'Doto', sans-serif;
-  font-size: clamp(2.6rem, 6vw, 5.2rem);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 0.95;
-  margin-bottom: 14px;
-}
-
-.intro {
-  font-family: 'Doto', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.6;
-  letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.68);
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-/* GALLERY GRID */
-
-.gallery {
-  width: min(92%, 1100px);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 24px;
-  position: relative;
-  z-index: 1;
-}
-
-.piece {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.piece::before {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 72%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-}
-
-.piece:hover::before {
-  opacity: 1;
-}
-
-.piece-image {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  background: #080808;
-}
-
-.piece-text {
-  margin-top: 10px;
-  text-align: left;
-  font-family: 'Doto', sans-serif;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  padding: 12px 12px 11px;
-}
-
-.piece-text h2 {
-  font-family: 'Doto', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  margin-bottom: 4px;
-  line-height: 1.3;
-}
-
-.caption {
-  font-family: 'Doto', sans-serif;
-  font-size: 0.62rem;
-  line-height: 1.6;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .piece-image {
-    height: 360px;
-  }
-}
-
-@media (max-width: 560px) {
-  body {
-    padding: 24px 10px 56px;
-  }
-
-  .site-header {
-    margin-bottom: 34px;
-  }
-
-  .gallery {
-    width: min(94%, 1100px);
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .piece-image {
-    height: auto;
-    max-height: 75vh;
-    object-fit: cover;
-  }
-
-  .orb {
-    filter: blur(80px);
-    opacity: 0.18;
-  }
-}
+</body>
+</html>
