@@ -115,7 +115,7 @@ body {
 /* GALLERY */
 
 .gallery {
-  width: min(100%, 920px);
+  width: min(92%, 1000px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -133,6 +133,7 @@ body {
   height: auto;
   display: block;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 /* TEXT PANEL */
