@@ -20,16 +20,38 @@
     <div class="orb orb-4"></div>
     <div class="orb orb-5"></div>
     <div class="orb orb-6"></div>
+    <div class="orb orb-7"></div>
+    <div class="orb orb-8"></div>
   </div>
 
   <header class="site-header">
     <h1>ANTHONY LAM</h1>
     <p class="intro">SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE</p>
+
+    <section class="music-player-shell" id="musicPlayerShell" aria-label="Music player">
+      <div class="music-player-nowplaying">
+        <p class="music-player-label">NOW PLAYING</p>
+        <h2 id="trackTitle">BLOW THE SPEAKER</h2>
+        <p id="trackArtist">FAKEMINK</p>
+      </div>
+
+      <div class="music-player-controls">
+        <button type="button" id="prevTrackBtn" class="music-btn" aria-label="Previous track">⏮</button>
+        <button type="button" id="playPauseBtn" class="music-btn" aria-label="Pause">❚❚</button>
+        <button type="button" id="nextTrackBtn" class="music-btn" aria-label="Next track">⏭</button>
+      </div>
+
+      <div class="music-player-volume">
+        <label for="volumeSlider">VOLUME</label>
+        <input id="volumeSlider" type="range" min="0" max="100" value="70" />
+      </div>
+    </section>
   </header>
+
+  <div id="yt-audio-player"></div>
 
   <main class="gallery">
 
-    <!-- CHAMPION -->
     <article class="piece">
       <img src="CHAMPION 1.jpg" alt="CHAMPION I" class="piece-image">
       <div class="piece-text">
@@ -46,7 +68,7 @@
       </div>
     </article>
 
-        <article class="piece">
+    <article class="piece">
       <img src="FIREBREATHER.jpg" alt="FIREBREATHER" class="piece-image">
       <div class="piece-text">
         <h2>FIREBREATHER</h2>
@@ -54,7 +76,6 @@
       </div>
     </article>
 
-    <!-- VIDEOS (ALPHABETICAL) -->
     <article class="piece">
       <iframe
         class="piece-image"
@@ -71,24 +92,19 @@
     </article>
 
     <article class="piece">
-  <iframe
-    class="piece-image"
-    src="https://www.youtube.com/embed/NW2xR2QK--U?autoplay=1&mute=1&loop=1&playlist=NW2xR2QK--U&controls=0&modestbranding=1&rel=0"
-    title="NEW VIDEO"
-    frameborder="0"
-    allow="autoplay; fullscreen"
-    allowfullscreen>
-  </iframe>
-
-  <div class="piece-text">
-    <h2>THE SUMMER</h2>
-    <p class="caption">
-      VIDEO — 2025
-      <br>
-      EXPERIMENTAL DIGITAL SHORT FILM
-    </p>
-  </div>
-</article>
+      <iframe
+        class="piece-image"
+        src="https://www.youtube.com/embed/NW2xR2QK--U?autoplay=1&mute=1&loop=1&playlist=NW2xR2QK--U&controls=0&modestbranding=1&rel=0"
+        title="THE SUMMER"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+      <div class="piece-text">
+        <h2>THE SUMMER</h2>
+        <p class="caption">VIDEO — 2025<br>EXPERIMENTAL DIGITAL SHORT FILM</p>
+      </div>
+    </article>
 
     <article class="piece">
       <iframe
@@ -104,8 +120,6 @@
         <p class="caption">VIDEO — 2026<br>EXPERIMENTAL DIGITAL SHORT FILM</p>
       </div>
     </article>
-
-    <!-- FIREWORK / NEW -->
 
     <article class="piece">
       <img src="MAGIC.jpg" alt="MAGIC" class="piece-image">
@@ -131,7 +145,6 @@
       </div>
     </article>
 
-    <!-- THE PARTY -->
     <article class="piece">
       <img src="THE PARTY.jpg" alt="THE PARTY I" class="piece-image">
       <div class="piece-text">
@@ -164,7 +177,6 @@
       </div>
     </article>
 
-    <!-- OTHER -->
     <article class="piece">
       <img src="SPIRIT HOTLINE.jpg" alt="SPIRIT HOTLINE" class="piece-image">
       <div class="piece-text">
@@ -198,34 +210,179 @@
     </article>
 
     <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/ProjectTwo/AnthonyLam/" target="_blank" class="piece-link">
-  <article class="piece">
-    <img src="SOCIALSCORE.png" alt="SOCIALSCORE" class="piece-image">
-
-    <div class="piece-text">
-      <h2>SOCIALSCORE</h2>
-      <p class="caption">
-        INTERACTIVE — 2026<br>
-        SOCIAL REPUTATION SYSTEM UI
-      </p>
-    </div>
-  </article>
-</a>
+      <article class="piece">
+        <img src="SOCIALSCORE.png" alt="SOCIALSCORE" class="piece-image">
+        <div class="piece-text">
+          <h2>SOCIALSCORE</h2>
+          <p class="caption">INTERACTIVE — 2026<br>SOCIAL REPUTATION SYSTEM UI</p>
+        </div>
+      </article>
+    </a>
 
     <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/Project_1/AnthonyLam/AnthonyLam/index.html" target="_blank" class="piece-link">
-  <article class="piece">
-    <img src="SCREENTIME.png" alt="SCREEN TIME" class="piece-image">
-
-    <div class="piece-text">
-      <h2>SCREEN TIME</h2>
-      <p class="caption">
-        INTERACTIVE — 2026<br>
-        DATA VISUALIZATION PROJECT
-      </p>
-    </div>
-  </article>
-</a>
+      <article class="piece">
+        <img src="SCREENTIME.png" alt="SCREEN TIME" class="piece-image">
+        <div class="piece-text">
+          <h2>SCREEN TIME</h2>
+          <p class="caption">INTERACTIVE — 2026<br>DATA VISUALIZATION PROJECT</p>
+        </div>
+      </article>
+    </a>
 
   </main>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    const tracks = [
+      { title: "BLOW THE SPEAKER", artist: "FAKEMINK", id: "DhiZ02PDwds" },
+      { title: "EASTER PINK", artist: "FAKEMINK", id: "KB5TKob9PeA" },
+      { title: "MOON RIVER", artist: "FRANK OCEAN", id: "mXiFHDfvn4A" },
+      { title: "RIGHT DOWN THE LINE", artist: "GERRY RAFERTY", id: "2_cccrJ4rQg" }
+    ];
+
+    let audioPlayer;
+    let currentTrackIndex = 0;
+    let playerReady = false;
+    let isPlaying = true;
+    let idleTimer;
+
+    const trackTitle = document.getElementById("trackTitle");
+    const trackArtist = document.getElementById("trackArtist");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const prevTrackBtn = document.getElementById("prevTrackBtn");
+    const nextTrackBtn = document.getElementById("nextTrackBtn");
+    const volumeSlider = document.getElementById("volumeSlider");
+    const musicPlayerShell = document.getElementById("musicPlayerShell");
+
+    function updateTrackUI() {
+      trackTitle.textContent = tracks[currentTrackIndex].title;
+      trackArtist.textContent = tracks[currentTrackIndex].artist;
+      playPauseBtn.textContent = isPlaying ? "❚❚" : "▶";
+      playPauseBtn.setAttribute("aria-label", isPlaying ? "Pause" : "Play");
+    }
+
+    function playTrack(index) {
+      currentTrackIndex = (index + tracks.length) % tracks.length;
+      if (playerReady && audioPlayer) {
+        audioPlayer.loadVideoById(tracks[currentTrackIndex].id);
+        audioPlayer.setVolume(Number(volumeSlider.value));
+        isPlaying = true;
+        updateTrackUI();
+      }
+    }
+
+    function nextTrack() {
+      playTrack(currentTrackIndex + 1);
+    }
+
+    function prevTrack() {
+      playTrack(currentTrackIndex - 1);
+    }
+
+    function togglePlayPause() {
+      if (!playerReady || !audioPlayer) return;
+
+      const state = audioPlayer.getPlayerState();
+      if (state === YT.PlayerState.PLAYING) {
+        audioPlayer.pauseVideo();
+        isPlaying = false;
+      } else {
+        audioPlayer.playVideo();
+        isPlaying = true;
+      }
+      updateTrackUI();
+    }
+
+    function resetIdleTimer() {
+      musicPlayerShell.classList.remove("is-idle");
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => {
+        musicPlayerShell.classList.add("is-idle");
+      }, 3500);
+    }
+
+    function enableAudioOnFirstInteraction() {
+      if (!playerReady || !audioPlayer) return;
+      audioPlayer.unMute();
+      audioPlayer.setVolume(Number(volumeSlider.value));
+      window.removeEventListener("pointerdown", enableAudioOnFirstInteraction);
+      window.removeEventListener("keydown", enableAudioOnFirstInteraction);
+      window.removeEventListener("touchstart", enableAudioOnFirstInteraction);
+    }
+
+    function onYouTubeIframeAPIReady() {
+      audioPlayer = new YT.Player("yt-audio-player", {
+        height: "0",
+        width: "0",
+        videoId: tracks[currentTrackIndex].id,
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1
+        },
+        events: {
+          onReady: (event) => {
+            playerReady = true;
+            event.target.mute();
+            event.target.setVolume(Number(volumeSlider.value));
+            event.target.playVideo();
+            updateTrackUI();
+            resetIdleTimer();
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.ENDED) {
+              nextTrack();
+            }
+            if (event.data === YT.PlayerState.PLAYING) {
+              isPlaying = true;
+              updateTrackUI();
+            }
+            if (event.data === YT.PlayerState.PAUSED) {
+              isPlaying = false;
+              updateTrackUI();
+            }
+          }
+        }
+      });
+    }
+
+    prevTrackBtn.addEventListener("click", () => {
+      prevTrack();
+      resetIdleTimer();
+    });
+
+    nextTrackBtn.addEventListener("click", () => {
+      nextTrack();
+      resetIdleTimer();
+    });
+
+    playPauseBtn.addEventListener("click", () => {
+      togglePlayPause();
+      resetIdleTimer();
+    });
+
+    volumeSlider.addEventListener("input", () => {
+      if (playerReady && audioPlayer) {
+        audioPlayer.setVolume(Number(volumeSlider.value));
+        if (Number(volumeSlider.value) > 0) {
+          audioPlayer.unMute();
+        }
+      }
+      resetIdleTimer();
+    });
+
+    ["mousemove", "mouseenter", "touchstart", "click"].forEach((eventName) => {
+      musicPlayerShell.addEventListener(eventName, resetIdleTimer);
+    });
+
+    window.addEventListener("pointerdown", enableAudioOnFirstInteraction);
+    window.addEventListener("keydown", enableAudioOnFirstInteraction);
+    window.addEventListener("touchstart", enableAudioOnFirstInteraction);
+
+    updateTrackUI();
+  </script>
 
 </body>
 </html>
