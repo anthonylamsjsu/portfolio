@@ -27,6 +27,9 @@
     <p class="intro">SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE</p>
   </header>
 
+  <!-- HIDDEN BACKGROUND AUDIO -->
+  <audio id="bg-audio" preload="auto"></audio>
+
   <main class="gallery">
 
     <!-- CHAMPION -->
@@ -46,7 +49,7 @@
       </div>
     </article>
 
-        <article class="piece">
+    <article class="piece">
       <img src="FIREBREATHER.jpg" alt="FIREBREATHER" class="piece-image">
       <div class="piece-text">
         <h2>FIREBREATHER</h2>
@@ -54,7 +57,7 @@
       </div>
     </article>
 
-    <!-- VIDEOS (ALPHABETICAL) -->
+    <!-- VIDEOS -->
     <article class="piece">
       <iframe
         class="piece-image"
@@ -71,24 +74,23 @@
     </article>
 
     <article class="piece">
-  <iframe
-    class="piece-image"
-    src="https://www.youtube.com/embed/NW2xR2QK--U?autoplay=1&mute=1&loop=1&playlist=NW2xR2QK--U&controls=0&modestbranding=1&rel=0"
-    title="NEW VIDEO"
-    frameborder="0"
-    allow="autoplay; fullscreen"
-    allowfullscreen>
-  </iframe>
-
-  <div class="piece-text">
-    <h2>THE SUMMER</h2>
-    <p class="caption">
-      VIDEO — 2025
-      <br>
-      EXPERIMENTAL DIGITAL SHORT FILM
-    </p>
-  </div>
-</article>
+      <iframe
+        class="piece-image"
+        src="https://www.youtube.com/embed/NW2xR2QK--U?autoplay=1&mute=1&loop=1&playlist=NW2xR2QK--U&controls=0&modestbranding=1&rel=0"
+        title="THE SUMMER"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+      <div class="piece-text">
+        <h2>THE SUMMER</h2>
+        <p class="caption">
+          VIDEO — 2025
+          <br>
+          EXPERIMENTAL DIGITAL SHORT FILM
+        </p>
+      </div>
+    </article>
 
     <article class="piece">
       <iframe
@@ -105,8 +107,7 @@
       </div>
     </article>
 
-    <!-- FIREWORK / NEW -->
-
+    <!-- MAGIC -->
     <article class="piece">
       <img src="MAGIC.jpg" alt="MAGIC" class="piece-image">
       <div class="piece-text">
@@ -198,34 +199,68 @@
     </article>
 
     <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/ProjectTwo/AnthonyLam/" target="_blank" class="piece-link">
-  <article class="piece">
-    <img src="SOCIALSCORE.png" alt="SOCIALSCORE" class="piece-image">
-
-    <div class="piece-text">
-      <h2>SOCIALSCORE</h2>
-      <p class="caption">
-        INTERACTIVE — 2026<br>
-        SOCIAL REPUTATION SYSTEM UI
-      </p>
-    </div>
-  </article>
-</a>
+      <article class="piece">
+        <img src="SOCIALSCORE.png" alt="SOCIALSCORE" class="piece-image">
+        <div class="piece-text">
+          <h2>SOCIALSCORE</h2>
+          <p class="caption">
+            INTERACTIVE — 2026<br>
+            SOCIAL REPUTATION SYSTEM UI
+          </p>
+        </div>
+      </article>
+    </a>
 
     <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/Project_1/AnthonyLam/AnthonyLam/index.html" target="_blank" class="piece-link">
-  <article class="piece">
-    <img src="SCREENTIME.png" alt="SCREEN TIME" class="piece-image">
-
-    <div class="piece-text">
-      <h2>SCREEN TIME</h2>
-      <p class="caption">
-        INTERACTIVE — 2026<br>
-        DATA VISUALIZATION PROJECT
-      </p>
-    </div>
-  </article>
-</a>
+      <article class="piece">
+        <img src="SCREENTIME.png" alt="SCREEN TIME" class="piece-image">
+        <div class="piece-text">
+          <h2>SCREEN TIME</h2>
+          <p class="caption">
+            INTERACTIVE — 2026<br>
+            DATA VISUALIZATION PROJECT
+          </p>
+        </div>
+      </article>
+    </a>
 
   </main>
+
+  <script>
+    const audio = document.getElementById("bg-audio");
+    const playlist = [
+      "https://raw.githubusercontent.com/anthonylamsjsu/portfolio/main/FAKEMINK%20BLOW%20THE%20SPEAKER.mp3",
+      "https://raw.githubusercontent.com/anthonylamsjsu/portfolio/main/FAKEMINK%20EASTER%20PINK.mp3"
+    ];
+
+    let currentTrack = 0;
+    let started = false;
+
+    function startTrack(index) {
+      currentTrack = index;
+      audio.src = playlist[currentTrack];
+      audio.volume = 0.7;
+      audio.play().catch(() => {});
+    }
+
+    audio.addEventListener("ended", () => {
+      currentTrack = (currentTrack + 1) % playlist.length;
+      startTrack(currentTrack);
+    });
+
+    function startAudioOnce() {
+      if (!started) {
+        started = true;
+        startTrack(0);
+      } else {
+        audio.play().catch(() => {});
+      }
+    }
+
+    window.addEventListener("click", startAudioOnce, { once: true });
+    window.addEventListener("keydown", startAudioOnce, { once: true });
+    window.addEventListener("touchstart", startAudioOnce, { once: true });
+  </script>
 
 </body>
 </html>
