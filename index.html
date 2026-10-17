@@ -29,7 +29,7 @@
             display: none;
         }
 
-        /* Make each gallery image a clickable project link */
+        /* Make each gallery preview a clickable link */
 
         .portfolio-grid .project-link {
             display: block;
@@ -40,6 +40,24 @@
         .portfolio-grid .project-link:focus-visible {
             outline: 3px solid #2731F5;
             outline-offset: 5px;
+        }
+
+        /* Square previews for the new videos and photos */
+
+        .portfolio-grid .project-link .gallery-preview {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Let clicks on video previews reach their links */
+
+        .portfolio-grid .project-link video {
+            pointer-events: none;
         }
     </style>
 </head>
@@ -85,9 +103,11 @@
                     <div class="portfolio-item flex-item-grid">
                         <a class="project-link" href="nye/index.html"
                             aria-label="View New Year's Eve Party in NYC project">
-                            <img src="images/nye-party-2-fallback.jpg" srcset="images/nye-party-2-640.jpg 640w,
+                            <img src="images/nye-party-2-fallback.jpg"
+                                srcset="images/nye-party-2-640.jpg 640w,
                                         images/nye-party-2-1280.jpg 1280w,
-                                        images/nye-party-2-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                        images/nye-party-2-1920.jpg 1920w"
+                                sizes="min(32rem, calc(30vw - 1.333333rem))"
                                 alt="Partygoers dancing closely together with a raised arm in the foreground.">
                         </a>
                     </div>
@@ -95,9 +115,11 @@
                     <div class="portfolio-item flex-item-grid">
                         <a class="project-link" href="nye/index.html"
                             aria-label="View New Year's Eve Party in NYC project">
-                            <img src="images/nye-party-1-fallback.jpg" srcset="images/nye-party-1-640.jpg 640w,
+                            <img src="images/nye-party-1-fallback.jpg"
+                                srcset="images/nye-party-1-640.jpg 640w,
                                         images/nye-party-1-1280.jpg 1280w,
-                                        images/nye-party-1-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                        images/nye-party-1-1920.jpg 1920w"
+                                sizes="min(32rem, calc(30vw - 1.333333rem))"
                                 alt="Two partygoers wearing sunglasses on a crowded dance floor.">
                         </a>
                     </div>
@@ -105,9 +127,11 @@
                     <div class="portfolio-item flex-item-grid">
                         <a class="project-link" href="nye/index.html"
                             aria-label="View New Year's Eve Party in NYC project">
-                            <img src="images/nye-party-3-fallback.jpg" srcset="images/nye-party-3-640.jpg 640w,
+                            <img src="images/nye-party-3-fallback.jpg"
+                                srcset="images/nye-party-3-640.jpg 640w,
                                         images/nye-party-3-1280.jpg 1280w,
-                                        images/nye-party-3-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                        images/nye-party-3-1920.jpg 1920w"
+                                sizes="min(32rem, calc(30vw - 1.333333rem))"
                                 alt="A partygoer in sunglasses and a black jacket surrounded by a dancing crowd.">
                         </a>
                     </div>
@@ -115,9 +139,11 @@
                     <div class="portfolio-item flex-item-grid">
                         <a class="project-link" href="nye/index.html"
                             aria-label="View New Year's Eve Party in NYC project">
-                            <img src="images/nye-party-4-fallback.jpg" srcset="images/nye-party-4-640.jpg 640w,
+                            <img src="images/nye-party-4-fallback.jpg"
+                                srcset="images/nye-party-4-640.jpg 640w,
                                         images/nye-party-4-1280.jpg 1280w,
-                                        images/nye-party-4-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                        images/nye-party-4-1920.jpg 1920w"
+                                sizes="min(32rem, calc(30vw - 1.333333rem))"
                                 alt="Hands illuminated by green light in front of partygoers dancing.">
                         </a>
                     </div>
@@ -125,9 +151,11 @@
                     <div class="portfolio-item flex-item-grid">
                         <a class="project-link" href="nye/index.html"
                             aria-label="View New Year's Eve Party in NYC project">
-                            <img src="images/nye-party-5-fallback.jpg" srcset="images/nye-party-5-640.jpg 640w,
+                            <img src="images/nye-party-5-fallback.jpg"
+                                srcset="images/nye-party-5-640.jpg 640w,
                                         images/nye-party-5-1280.jpg 1280w,
-                                        images/nye-party-5-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                        images/nye-party-5-1920.jpg 1920w"
+                                sizes="min(32rem, calc(30vw - 1.333333rem))"
                                 alt="A crowded dance floor with raised hands and a person wearing sunglasses in the foreground.">
                         </a>
                     </div>
@@ -220,6 +248,97 @@
                             <img src="images/WISHMAKER%20III.jpg" alt="Wishmaker III">
                         </a>
                     </div>
+
+                    <!-- New video previews -->
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="videos/SPLITSCREEN.mp4"
+                            aria-label="Watch Splitscreen">
+                            <video class="gallery-preview"
+                                autoplay muted loop playsinline
+                                preload="metadata"
+                                aria-hidden="true">
+                                <source src="videos/SPLITSCREEN.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="videos/BLUE%20TOKYO.mp4"
+                            aria-label="Watch Blue Tokyo">
+                            <video class="gallery-preview"
+                                autoplay muted loop playsinline
+                                preload="metadata"
+                                aria-hidden="true">
+                                <source src="videos/BLUE%20TOKYO.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="videos/GRAILEDAD.mp4"
+                            aria-label="Watch Grailed Ad">
+                            <video class="gallery-preview"
+                                autoplay muted loop playsinline
+                                preload="metadata"
+                                aria-hidden="true">
+                                <source src="videos/GRAILEDAD.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="videos/GOLDFISH.mp4"
+                            aria-label="Watch Goldfish">
+                            <video class="gallery-preview"
+                                autoplay muted loop playsinline
+                                preload="metadata"
+                                aria-hidden="true">
+                                <source src="videos/GOLDFISH.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    </div>
+
+                    <!-- New photo previews -->
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="images/GLOW.jpg"
+                            aria-label="View Glow">
+                            <img class="gallery-preview"
+                                src="images/GLOW.jpg"
+                                alt="A person looking over their shoulder with warm light illuminating their face against darkness."
+                                loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="images/KAMIKAZE.jpg"
+                            aria-label="View Kamikaze">
+                            <img class="gallery-preview"
+                                src="images/KAMIKAZE.jpg"
+                                alt="A skateboarder airborne above a sunlit residential street covered in tree shadows."
+                                loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link"
+                            href="images/DANCING%20WITH%20THE%20DEVIL.jpg"
+                            aria-label="View Dancing with the Devil">
+                            <img class="gallery-preview"
+                                src="images/DANCING%20WITH%20THE%20DEVIL.jpg"
+                                alt="Silhouettes of a crowd beneath intense red beams of light."
+                                loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- WOLF stays at the bottom -->
 
                     <div class="portfolio-item flex-item-grid artwork-item">
                         <a class="project-link" href="wolf/index.html" aria-label="View Wolf project">
