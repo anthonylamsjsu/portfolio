@@ -1,266 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ANTHONY LAM — PORTFOLIO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1300, viewport-fit=cover">
+    <title>@ANTHONYLAM PORTFOLIO</title>
+    <link rel="stylesheet" href="css/style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Click to reveal the biography */
 
-  <link rel="stylesheet" href="style.css">
+        .about-toggle summary {
+            display: inline-block;
+            font-size: 8rem;
+            font-weight: normal;
+            color: #ff2b2b;
+            cursor: pointer;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .about-toggle summary:hover,
+        .about-toggle summary:focus-visible {
+            color: #2731F5;
+        }
+
+        .about-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Make each gallery image a clickable project link */
+
+        .portfolio-grid .project-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .portfolio-grid .project-link:focus-visible {
+            outline: 3px solid #2731F5;
+            outline-offset: 5px;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>
+            <span class="name">ANTHONY LAM</span>
+            <span class="portfolio-title">PORTFOLIO</span>
+        </h1>
 
-  <div class="background-orbs">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="orb orb-4"></div>
-    <div class="orb orb-5"></div>
-    <div class="orb orb-6"></div>
-  </div>
+        <nav aria-label="Main navigation">
+            <a href="#about-section">About</a>
+            <a href="#portfolio-section">Work</a>
+            <a href="#contact-section">Contact</a>
+        </nav>
+    </header>
 
-  <header class="site-header">
-    <h1>ANTHONY LAM</h1>
-    <p class="intro">SELECTED WORKS IN DIGITAL MEDIA, IMAGE-MAKING, AND OBJECT-BASED PRACTICE</p>
-  </header>
+    <main>
+        <section class="about-section" id="about-section">
+            <div class="about-content">
+                <details class="about-toggle">
+                    <summary>✱ ABOUT ME</summary>
 
-  <!-- HIDDEN BACKGROUND AUDIO -->
-  <audio id="bg-audio" preload="auto"></audio>
+                    <p>I am Anthony Lam. A photographer and graphic designer. A creative director and Digital Media Art
+                        student at San Jose State University. I have had a camera in my hand since I was twelve.
+                        Documenting everything from skateboarding with friends to cars in a parking lot to countless
+                        parties. What started as capturing moments with friends became part of my identity as a
+                        storyteller through visuals.
+                        My work captures everyday moments and the feeling of fleeting youth. I am drawn to the
+                        imperfections. Moments where grit and magic meet. Working across photography and video as well
+                        as design and creative direction. I aim to create work that feels immediate and expressive.
+                        Distinctly human in an increasingly automated world where imperfection is so often edited away.
+                    </p>
+                </details>
+            </div>
+        </section>
 
-  <main class="gallery">
+        <section class="portfolio-section" id="portfolio-section" aria-label="Portfolio projects">
+            <div class="portfolio-content">
+                <div class="portfolio-grid flex-container-grid">
 
-    <!-- CHAMPION -->
-    <article class="piece">
-      <img src="CHAMPION 1.jpg" alt="CHAMPION I" class="piece-image">
-      <div class="piece-text">
-        <h2>CHAMPION I</h2>
-        <p class="caption">PHOTOGRAPHY — 2018</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid">
+                        <a class="project-link" href="nye/index.html"
+                            aria-label="View New Year's Eve Party in NYC project">
+                            <img src="images/nye-party-2-fallback.jpg" srcset="images/nye-party-2-640.jpg 640w,
+                                        images/nye-party-2-1280.jpg 1280w,
+                                        images/nye-party-2-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                alt="Partygoers dancing closely together with a raised arm in the foreground.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="CHAMPION 2.jpg" alt="CHAMPION II" class="piece-image">
-      <div class="piece-text">
-        <h2>CHAMPION II</h2>
-        <p class="caption">PHOTOGRAPHY — 2018</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid">
+                        <a class="project-link" href="nye/index.html"
+                            aria-label="View New Year's Eve Party in NYC project">
+                            <img src="images/nye-party-1-fallback.jpg" srcset="images/nye-party-1-640.jpg 640w,
+                                        images/nye-party-1-1280.jpg 1280w,
+                                        images/nye-party-1-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                alt="Two partygoers wearing sunglasses on a crowded dance floor.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="FIREBREATHER.jpg" alt="FIREBREATHER" class="piece-image">
-      <div class="piece-text">
-        <h2>FIREBREATHER</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid">
+                        <a class="project-link" href="nye/index.html"
+                            aria-label="View New Year's Eve Party in NYC project">
+                            <img src="images/nye-party-3-fallback.jpg" srcset="images/nye-party-3-640.jpg 640w,
+                                        images/nye-party-3-1280.jpg 1280w,
+                                        images/nye-party-3-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                alt="A partygoer in sunglasses and a black jacket surrounded by a dancing crowd.">
+                        </a>
+                    </div>
 
-    <!-- VIDEOS -->
-    <article class="piece">
-      <iframe
-        class="piece-image"
-        src="https://www.youtube.com/embed/e52JGE1PeZ4?autoplay=1&mute=1&loop=1&playlist=e52JGE1PeZ4&controls=0&modestbranding=1&rel=0"
-        title="THE RACE"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
-      <div class="piece-text">
-        <h2>THE RACE</h2>
-        <p class="caption">VIDEO — 2026<br>EXPERIMENTAL SHORT SUPER 8 FILM</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid">
+                        <a class="project-link" href="nye/index.html"
+                            aria-label="View New Year's Eve Party in NYC project">
+                            <img src="images/nye-party-4-fallback.jpg" srcset="images/nye-party-4-640.jpg 640w,
+                                        images/nye-party-4-1280.jpg 1280w,
+                                        images/nye-party-4-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                alt="Hands illuminated by green light in front of partygoers dancing.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <iframe
-        class="piece-image"
-        src="https://www.youtube.com/embed/NW2xR2QK--U?autoplay=1&mute=1&loop=1&playlist=NW2xR2QK--U&controls=0&modestbranding=1&rel=0"
-        title="THE SUMMER"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
-      <div class="piece-text">
-        <h2>THE SUMMER</h2>
-        <p class="caption">
-          VIDEO — 2025
-          <br>
-          EXPERIMENTAL DIGITAL SHORT FILM
-        </p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid">
+                        <a class="project-link" href="nye/index.html"
+                            aria-label="View New Year's Eve Party in NYC project">
+                            <img src="images/nye-party-5-fallback.jpg" srcset="images/nye-party-5-640.jpg 640w,
+                                        images/nye-party-5-1280.jpg 1280w,
+                                        images/nye-party-5-1920.jpg 1920w" sizes="min(32rem, calc(30vw - 1.333333rem))"
+                                alt="A crowded dance floor with raised hands and a person wearing sunglasses in the foreground.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <iframe
-        class="piece-image"
-        src="https://www.youtube.com/embed/671y1S3CcMY?autoplay=1&mute=1&loop=1&playlist=671y1S3CcMY&controls=0&modestbranding=1&rel=0"
-        title="REX THE GOLDFISH"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
-      <div class="piece-text">
-        <h2>REX THE GOLDFISH</h2>
-        <p class="caption">VIDEO — 2026<br>EXPERIMENTAL DIGITAL SHORT FILM</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="spirit-hotline/index.html"
+                            aria-label="View Spirit Hotline project">
+                            <img src="images/SPIRIT%20HOTLINE.jpg"
+                                alt="A person with red hair inside an illuminated phone booth surrounded by darkness.">
+                        </a>
+                    </div>
 
-    <!-- MAGIC -->
-    <article class="piece">
-      <img src="MAGIC.jpg" alt="MAGIC" class="piece-image">
-      <div class="piece-text">
-        <h2>MAGIC</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="magic/index.html" aria-label="View Magic project">
+                            <img src="images/MAGIC.jpg"
+                                alt="A hand holding a small flame, illuminated by red and blue light against a dark background.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="MAGIC II.jpg" alt="MAGIC II" class="piece-image">
-      <div class="piece-text">
-        <h2>MAGIC II</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="magic/index.html" aria-label="View Magic project">
+                            <img src="images/MAGIC%20III.jpg"
+                                alt="A silhouetted person in front of bright white, blue, and red fireworks.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="MAGIC III.jpg" alt="MAGIC III" class="piece-image">
-      <div class="piece-text">
-        <h2>MAGIC III</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="magic/index.html" aria-label="View Magic project">
+                            <img src="images/MAGIC%20II.jpg"
+                                alt="Dark silhouettes watching colorful fireworks at night.">
+                        </a>
+                    </div>
 
-    <!-- THE PARTY -->
-    <article class="piece">
-      <img src="THE PARTY.jpg" alt="THE PARTY I" class="piece-image">
-      <div class="piece-text">
-        <h2>THE PARTY I</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="heatstroke/index.html" aria-label="View Heatstroke project">
+                            <img src="images/HEATSTROKE.jpg"
+                                alt="A blurred figure illuminated by intense red light in a dark setting.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="THE PARTY II.jpg" alt="THE PARTY II" class="piece-image">
-      <div class="piece-text">
-        <h2>THE PARTY II</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="firebreather/index.html" aria-label="View Firebreather project">
+                            <img src="images/FIREBREATHER.jpg"
+                                alt="Close-up of a person holding a smoking roll near their lips outdoors.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="THE PARTY III.jpg" alt="THE PARTY III" class="piece-image">
-      <div class="piece-text">
-        <h2>THE PARTY III</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="champion/index.html" aria-label="View Champion project">
+                            <img src="images/CHAMPION%202.jpg"
+                                alt="A person wearing a dark ski mask and hoodie beside a studio light against a pale backdrop.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="THE PARTY IV.jpg" alt="THE PARTY IV" class="piece-image">
-      <div class="piece-text">
-        <h2>THE PARTY IV</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="champion/index.html" aria-label="View Champion project">
+                            <img src="images/CHAMPION%201.jpg"
+                                alt="Black-and-white portrait of a person wearing a ski mask and holding banknotes beside their face.">
+                        </a>
+                    </div>
 
-    <!-- OTHER -->
-    <article class="piece">
-      <img src="SPIRIT HOTLINE.jpg" alt="SPIRIT HOTLINE" class="piece-image">
-      <div class="piece-text">
-        <h2>SPIRIT HOTLINE</h2>
-        <p class="caption">DIGITAL PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="anthony-in-the-alley/index.html"
+                            aria-label="View Anthony in the Alley image">
+                            <img src="images/ANTHONY%20IN%20THE%20ALLEY.jpg"
+                                alt="Anthony walking up stairs surrounded by a colorful cartoon mural.">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="HEATSTROKE.jpg" alt="HEATSTROKE" class="piece-image">
-      <div class="piece-text">
-        <h2>HEATSTROKE</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="tokyo-scene/index.html" aria-label="View Tokyo Scene image">
+                            <img src="images/TOKYO%20SCENE.JPG" alt="Tokyo Scene">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="THE MAN OF THE HOUR.JPG" alt="THE MAN OF THE HOUR" class="piece-image">
-      <div class="piece-text">
-        <h2>THE MAN OF THE HOUR</h2>
-        <p class="caption">FILM PHOTOGRAPHY — 2026</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="wishmaker/index.html" aria-label="View Wishmaker image">
+                            <img src="images/WISHMAKER.jpg" alt="Wishmaker">
+                        </a>
+                    </div>
 
-    <article class="piece">
-      <img src="WOLF.jpeg" alt="WOLF" class="piece-image">
-      <div class="piece-text">
-        <h2>WOLF</h2>
-        <p class="caption">DIGITAL ILLUSTRATION / SCREENPRINT</p>
-      </div>
-    </article>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="wishmaker/index.html" aria-label="View Wishmaker II image">
+                            <img src="images/WISHMAKER%20II.jpg" alt="Wishmaker II">
+                        </a>
+                    </div>
 
-    <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/ProjectTwo/AnthonyLam/" target="_blank" class="piece-link">
-      <article class="piece">
-        <img src="SOCIALSCORE.png" alt="SOCIALSCORE" class="piece-image">
-        <div class="piece-text">
-          <h2>SOCIALSCORE</h2>
-          <p class="caption">
-            INTERACTIVE — 2026<br>
-            SOCIAL REPUTATION SYSTEM UI
-          </p>
-        </div>
-      </article>
-    </a>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="wishmaker/index.html" aria-label="View Wishmaker III image">
+                            <img src="images/WISHMAKER%20III.jpg" alt="Wishmaker III">
+                        </a>
+                    </div>
 
-    <a href="https://anthonylamsjsu.github.io/SJSU_Art_101_S26_01/Assignments/Project_1/AnthonyLam/AnthonyLam/index.html" target="_blank" class="piece-link">
-      <article class="piece">
-        <img src="SCREENTIME.png" alt="SCREEN TIME" class="piece-image">
-        <div class="piece-text">
-          <h2>SCREEN TIME</h2>
-          <p class="caption">
-            INTERACTIVE — 2026<br>
-            DATA VISUALIZATION PROJECT
-          </p>
-        </div>
-      </article>
-    </a>
+                    <div class="portfolio-item flex-item-grid artwork-item">
+                        <a class="project-link" href="wolf/index.html" aria-label="View Wolf project">
+                            <img src="images/WOLF.jpeg"
+                                alt="Nine-panel illustration of a cartoon wolf in red, blue, black, and white.">
+                        </a>
+                    </div>
 
-  </main>
+                </div>
+            </div>
+        </section>
 
-  <script>
-    const audio = document.getElementById("bg-audio");
-    const playlist = [
-      "https://raw.githubusercontent.com/anthonylamsjsu/portfolio/main/FAKEMINK%20BLOW%20THE%20SPEAKER.mp3",
-      "https://raw.githubusercontent.com/anthonylamsjsu/portfolio/main/FAKEMINK%20EASTER%20PINK.mp3"
-    ];
+        <section class="contact-section" id="contact-section">
+            <div class="contact-content">
+                <h2>CONTACT ME</h2>
 
-    let currentTrack = 0;
-    let started = false;
+                <p>
+                    <a href="https://www.instagram.com/anthonylam/">
+                        ✱ INSTAGRAM ‎ ‎ ‎ anthonylam
+                    </a>
+                </p>
 
-    function startTrack(index) {
-      currentTrack = index;
-      audio.src = playlist[currentTrack];
-      audio.volume = 0.7;
-      audio.play().catch(() => {});
-    }
+                <p>
+                    <a href="mailto:lanthony.work@gmail.com">
+                        ✱ EMAIL ‎‎ lanthony.work gmail.com
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
 
-    audio.addEventListener("ended", () => {
-      currentTrack = (currentTrack + 1) % playlist.length;
-      startTrack(currentTrack);
-    });
+    <footer>
+        <p>🅒 2026 ANTHONY LAM</p>
+    </footer>
 
-    function startAudioOnce() {
-      if (!started) {
-        started = true;
-        startTrack(0);
-      } else {
-        audio.play().catch(() => {});
-      }
-    }
+    <audio id="background-music" preload="none">
+        <source src="audio/HOLDMYLIQUOR.mp3" type="audio/mpeg">
+    </audio>
 
-    window.addEventListener("click", startAudioOnce, { once: true });
-    window.addEventListener("keydown", startAudioOnce, { once: true });
-    window.addEventListener("touchstart", startAudioOnce, { once: true });
-  </script>
+    <button id="music-toggle" type="button" aria-label="Play music" hidden>
+        ⏵
+    </button>
 
+    <script>
+        const music = document.getElementById("background-music");
+        const musicButton = document.getElementById("music-toggle");
+
+        let starting = false;
+
+        async function startMusic() {
+            if (starting) return;
+            starting = true;
+
+            try {
+                await music.play();
+            } catch (error) {
+                console.error("Music could not start:", error);
+            } finally {
+                starting = false;
+            }
+        }
+
+        function firstInteraction(event) {
+            if (event.target.closest("#music-toggle")) return;
+            startMusic();
+        }
+
+        document.addEventListener("click", firstInteraction);
+
+        musicButton.addEventListener("click", () => {
+            if (music.paused) {
+                startMusic();
+            } else {
+                music.pause();
+            }
+        });
+
+        music.addEventListener("play", () => {
+            document.removeEventListener("click", firstInteraction);
+            musicButton.hidden = false;
+            musicButton.textContent = "\u23F8\uFE0E";
+            musicButton.setAttribute("aria-label", "Pause music");
+        });
+
+        function showPlaySymbol() {
+            musicButton.textContent = "⏵";
+            musicButton.setAttribute("aria-label", "Play music");
+        }
+
+        music.addEventListener("pause", showPlaySymbol);
+        music.addEventListener("ended", showPlaySymbol);
+    </script>
 </body>
+
 </html>
